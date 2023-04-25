@@ -14,7 +14,7 @@ class TickerLevelDataParser():
         return dataOrganizedByTicker
 
     def readFileContents(self):
-        fin = files("data").joinpath(self.filename)
+        fin = files("stock_market_bytetheory.data").joinpath(self.filename)
         csvin = csv.reader(open(fin))
         rows = [row for row in csvin]
         del rows[0]

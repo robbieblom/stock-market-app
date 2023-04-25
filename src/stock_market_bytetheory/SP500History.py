@@ -1,5 +1,5 @@
-from SectorIndustryTickerParser import SectorIndustryTickerParser
-from TickerLevelDataParser import TickerLevelDataParser
+from stock_market_bytetheory import SectorIndustryTickerParser
+from stock_market_bytetheory import TickerLevelDataParser
 import functools
 
 class SP500History():

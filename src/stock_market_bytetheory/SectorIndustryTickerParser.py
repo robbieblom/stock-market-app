@@ -12,7 +12,7 @@ class SectorIndustryTickerParser():
         return hierarchy
 
     def readFileContents(self):
-        fileContents = files('data').joinpath(self.filename).read_text()
+        fileContents = files('stock_market_bytetheory.data').joinpath(self.filename).read_text()
         return ET.fromstring(fileContents)
     
     def convertFileContentsToHierarchy(self, fileContents):
