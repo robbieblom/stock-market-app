@@ -12,6 +12,12 @@ class SP500History():
         tickers = self.sectorIndustryTickerHierarchy[sector][industry]
         return tickers
 
+    def getAllSectorsAndIndustries(self):
+        return {sector: self.getIndustriesForSector(sector) for sector in self.sectorIndustryTickerHierarchy.keys()}
+
+    def getIndustriesForSector(self, sector):
+        return [industry for industry in self.sectorIndustryTickerHierarchy[sector].keys()]
+
     def getVolumeWeightedAveragePrice(self, ticker):
         # Return the volume weighted average price of the stock.  In order to do this,
         # first find the average price of the stock on each day.  Then, multiply that price with the
