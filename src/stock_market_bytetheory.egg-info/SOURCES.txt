@@ -13,6 +13,3 @@ src/stock_market_bytetheory.egg-info/top_level.txt
 src/stock_market_bytetheory/data/SP500_ind.csv
 src/stock_market_bytetheory/data/SP_500.xml
 src/stock_market_bytetheory/data/__init__.py
-src/stock_market_bytetheory/tests/__init__.py
-src/stock_market_bytetheory/tests/main.py
-src/stock_market_bytetheory/tests/test.py
