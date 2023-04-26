@@ -56,7 +56,7 @@ class TickerLevelDataParser():
         if(self.tickerHasBeenOrganized(ticker, organizedData)):
             organizedData[ticker].append(self.everythingButTicker(row))
         else:
-            organizedData.update({ticker: self.everythingButTicker(row)})
+            organizedData.update({ticker: [ self.everythingButTicker(row) ]})
         return organizedData
 
     def tickerHasBeenOrganized(self, ticker, organizedData):
@@ -65,5 +65,5 @@ class TickerLevelDataParser():
         return True
 
     def everythingButTicker(self, row):
-        return [ [row[0]] + row[2:] ]
+        return [ row[0] ] + row[2:]
         

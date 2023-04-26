@@ -1,6 +1,7 @@
 from stock_market_bytetheory import SectorIndustryTickerParser
 from stock_market_bytetheory import TickerLevelDataParser
 import functools
+import pprint as pp
 
 class SP500History():
 
@@ -18,6 +19,20 @@ class SP500History():
     def getIndustriesForSector(self, sector):
         return [industry for industry in self.sectorIndustryTickerHierarchy[sector].keys()]
 
+    def getPricingMetricsForIndustry(self, industry, sector):
+        metrics = []
+        tickers = self.sectorIndustryTickerHierarchy[sector][industry]
+        for ticker in tickers:
+            metrics.append(self.getAllMetricsForTicker(ticker))
+        return metrics
+    
+    def getAllMetricsForTicker(self, ticker):
+        return {
+            'ticker': ticker,
+            'vwap': self.getVolumeWeightedAveragePrice(ticker),
+            'avgOpen': self.getAverageOpenPrice(ticker)
+        }
+
     def getVolumeWeightedAveragePrice(self, ticker):
         # Return the volume weighted average price of the stock.  In order to do this,
         # first find the average price of the stock on each day.  Then, multiply that price with the
@@ -26,11 +41,14 @@ class SP500History():
 
         sumOfWeightedDailyPrices = 0
         sumOfDailyVolume = 0
+        # pp.pprint(self.tickerLevelData.keys())
+        # pp.pprint(self.tickerLevelData['GOOG'])
         for dayOfPriceData in self.tickerLevelData[ticker]:
-            [openPrice, highPrice, lowPrice, closePrice, volumeForDay] = dayOfPriceData
+            # print(dayOfPriceData)
+            [date, openPrice, highPrice, lowPrice, closePrice, volumeForDay] = dayOfPriceData
             averagePrice = self.computeAveragePriceForDay(highPrice, lowPrice, closePrice)
             sumOfWeightedDailyPrices += self.computeWeightedPriceForDay(averagePrice, volumeForDay)
-            totalVolume += volumeForDay
+            sumOfDailyVolume += volumeForDay
         return float(sumOfWeightedDailyPrices/sumOfDailyVolume)
 
     def computeAveragePriceForDay(self, high, low, close):
@@ -52,7 +70,7 @@ class SP500History():
     def numberOfOpenPrices(self, ticker):
         return len(self.tickerLevelData[ticker])
 
-    def find_return(self, ticker, start, end):
+    def findReturn(self, ticker, start, end):
         # Uses the opening price on the starting date, and the closing price on the ending date.
         openPriceOnStartDate = self.findOpenPriceOnStartDate(ticker, start)
         closePriceOnEndDate = self.findClosePriceOnEndDate(ticker, end)
