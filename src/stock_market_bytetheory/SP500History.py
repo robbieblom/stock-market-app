@@ -61,11 +61,11 @@ class SP500History():
         return self.sumOfAllOpenPrices(ticker) / self.numberOfOpenPrices(ticker)
         
     def sumOfAllOpenPrices(self, ticker):
-        def addOpenPrices(day1Prices, day2Prices):
-            [open1, open2] = [day1Prices[2], day2Prices[2]]
-            return open1 + open2
+        def addOpenPrices(runningSum, dayPrice):
+            openPrice =  dayPrice[2]
+            return runningSum + openPrice
 
-        return functools.reduce(addOpenPrices, self.tickerLevelData[ticker])
+        return functools.reduce(addOpenPrices, self.tickerLevelData[ticker], 0)
 
     def numberOfOpenPrices(self, ticker):
         return len(self.tickerLevelData[ticker])
