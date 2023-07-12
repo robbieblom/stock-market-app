@@ -32,8 +32,7 @@
 <symbol ticker="AXP" name="American Express Co" type="stock" sector="Financials" industry="Consumer Finance"/>
 <symbol ticker="AMT" name="American Tower Corp A" type="stock" sector="Financials" industry="REITs"/>
 <symbol ticker="AMP" name="Ameriprise Financial" type="stock" sector="Financials" industry="Diversified Financial Services"/>
-<symbol ticker="ABC" name="AmerisourceBergen Corp" type="stock" sector="Health Care" industry="Health Care Distribution &amp; Services"/>
-<symbol ticker="AME" name="Ametek" type="stock" sector="Industrials" industry="Electrical Components and Equipment"/>
+<symbol ticker="ABC" name="AmerisourceBergen Corp" type="stock" sector="Health Care" industry="Health Care Distributors &amp; Services"/>
 <symbol ticker="AMGN" name="Amgen Inc" type="stock" sector="Health Care" industry="Biotechnology"/>
 <symbol ticker="APH" name="Amphenol Corp A" type="stock" sector="Industrials" industry="Electrical Components &amp; Equipment"/>
 <symbol ticker="APC" name="Anadarko Petroleum Corp" type="stock" sector="Energy" industry="Oil &amp; Gas Exploration &amp; Production"/>
@@ -125,7 +124,6 @@
 <symbol ticker="GLW" name="Corning Inc." type="stock" sector="Industrials" industry="Construction &amp; Engineering"/>
 <symbol ticker="COST" name="Costco Co." type="stock" sector="Consumer Staples" industry="Hypermarkets &amp; Super Centers"/>
 <symbol ticker="COV" name="Covidien plc" type="stock" sector="Health Care" industry="Health Care Equipment &amp; Services"/>
-<symbol ticker="CCI" name="Crown Castle International Corp." type="stock" sector="Telecommunications Services" industry="Wireless Telecommunications Services"/>
 <symbol ticker="CSX" name="CSX Corp." type="stock" sector="Industrials" industry="Railroads"/>
 <symbol ticker="CMI" name="Cummins Inc." type="stock" sector="Industrials" industry="Industrial Machinery"/>
 <symbol ticker="CVS" name="CVS Caremark Corp." type="stock" sector="Consumer Staples" industry="Drug Retail"/>
@@ -281,7 +279,6 @@
 <symbol ticker="LSI" name="LSI Corporation" type="stock" sector="Information Technology" industry="Semiconductors"/>
 <symbol ticker="LYB" name="LyondellBasell" type="stock" sector="Materials" industry="Diversified Chemicals"/>
 <symbol ticker="MTB" name="M&amp;T Bank Corp." type="stock" sector="Financials" industry="Banks"/>
-<symbol ticker="MAC" name="Macerich" type="stock" sector="Financials" industry="Retail REITs"/>
 <symbol ticker="M" name="Macy's Inc." type="stock" sector="Consumer Discretionary" industry="Department Stores"/>
 <symbol ticker="MRO" name="Marathon Oil Corp." type="stock" sector="Energy" industry="Oil &amp; Gas Exploration &amp; Production"/>
 <symbol ticker="MPC" name="Marathon Petroleum" type="stock" sector="Energy" industry="Oil &amp; Gas Refining &amp; Marketing &amp; Transportation"/>
@@ -323,7 +320,6 @@
 <symbol ticker="NEM" name="Newmont Mining Corp. (Hldg. Co.)" type="stock" sector="Materials" industry="Gold"/>
 <symbol ticker="NWSA" name="News Corporation" type="stock" sector="Consumer Discretionary" industry="Publishing"/>
 <symbol ticker="NEE" name="NextEra Energy Resources" type="stock" sector="Utilities" industry="Multi-Utilities &amp; Unregulated Power"/>
-<symbol ticker="NLSN" name="Nielsen Holdings" type="stock" sector="Industrials" industry="Research &amp; Consulting Services"/>
 <symbol ticker="NKE" name="NIKE Inc." type="stock" sector="Consumer Discretionary" industry="Apparel, Accessories &amp; Luxury Goods"/>
 <symbol ticker="NI" name="NiSource Inc." type="stock" sector="Utilities" industry="Multi-Utilities &amp; Unregulated Power"/>
 <symbol ticker="NE" name="Noble Corp" type="stock" sector="Energy" industry="Oil &amp; Gas Drilling"/>
